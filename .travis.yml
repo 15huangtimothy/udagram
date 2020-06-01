@@ -1,3 +1,5 @@
 # import local travis yaml files
 import:
-- udagram-api-feed/.travis.yml
+    - udagram-api-feed/.travis.yml
+    - udagram-api-users/.travis.yml
+    - udagram-reverse-proxy/.travis.yml

@@ -1,0 +1,9 @@
+POSTGRES_USERNAME=postgres
+POSTGRES_PASSWORD=udagramtimothh5dev
+POSTGRES_DB=udagramtimothh5dev
+POSTGRES_HOST=udagramtimothh5dev.cqjwk99ztqge.us-east-2.rds.amazonaws.com
+AWS_REGION=us-east-2
+AWS_PROFILE=default
+AWS_BUCKET=udagram-timothh5-dev
+URL=http://localhost:8100
+JWT_SECRET=helloworld
