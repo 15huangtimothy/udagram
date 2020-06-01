@@ -1,0 +1,3 @@
+# import local travis yaml files
+import:
+- udagram-api-feed/.travis.yml
