@@ -1,27 +1,46 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    labels:
-        service: udagram-api-feed
     name: udagram-api-feed
+    labels:
+        app: udagram-api-feed
 spec:
     replicas: 1
+    selector:
+        matchLabels:
+            app: udagram-api-feed
     template:
         metadata:
             labels:
-                service: udagram-api-feed
+                app: udagram-api-feed
         spec:
             containers:
-                - image: 15huangtimothy/udagram-api-feed
-                  name: udagram-api-feed
-                  imagePullPolicy: Always
-                  resources:
-                      requests:
-                          memory: "64Mi"
-                          cpu: "250m"
-                      limits:
-                          memory: "1024Mi"
-                          cpu: "500m"
+                - name: udagram-api-feed
+                  image: 15huangtimothy/udagram-api-feed
                   ports:
                       - containerPort: 8080
-            restartPolicy: Always
+                  env:
+                      - name: POSTGRES_USERNAME
+                        value: postgres
+                      - name: POSTGRES_PASSWORD
+                        value: udagramtimothh5dev
+                      - name: POSTGRES_DB
+                        value: udagramtimothh5dev
+                      - name: POSTGRES_HOST
+                        value: udagramtimothh5dev.cqjwk99ztqge.us-east-2.rds.amazonaws.com
+                      - name: AWS_REGION
+                        value: us-east-2
+                      - name: AWS_PROFILE
+                        value: default
+                      - name: AWS_BUCKET
+                        value: udagram-timothh5-dev
+                      - name: URL
+                        value: http://localhost:8100
+                      - name: JWT_SECRET
+                        value: helloworld
+                #   livenessProbe:
+                #       httpGet:
+                #           path: /health
+                #           port: 8080
+                #       initialDelaySeconds: 3
+                #       periodSeconds: 3
