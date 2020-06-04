@@ -35,7 +35,7 @@ spec:
                       - name: AWS_BUCKET
                         value: udagram-timothh5-dev
                       - name: URL
-                        value: http://localhost:8100
+                        value: http://udagram-reverse-proxy:8080/api/v0
                       - name: JWT_SECRET
                         value: helloworld
                 #   livenessProbe:
