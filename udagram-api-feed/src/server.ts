@@ -35,9 +35,9 @@ import { V0_FEED_MODELS } from "./controllers/v0/model.index";
     app.use("/", IndexRouter);
 
     // Root URI call
-    app.get("/", async (req, res) => {
-        res.send("/api/v0/");
-    });
+    // app.get("/", async (req, res) => {
+    //     res.send("/api/v0/");
+    // });
 
     // Start the Server
     app.listen(port, () => {
