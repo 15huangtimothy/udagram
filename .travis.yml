@@ -3,3 +3,4 @@ import:
     - udagram-api-feed/.travis.yml
     - udagram-api-users/.travis.yml
     - udagram-reverse-proxy/.travis.yml
+    - udagram-frontend/.travis.yml
